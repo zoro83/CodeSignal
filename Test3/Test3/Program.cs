@@ -30,9 +30,6 @@ namespace Test3
             }
             return flag;
         }
-
-
-
         static void Main(string[] args)
         {
             bool temp = checkPalindrome("aaabaaag");
