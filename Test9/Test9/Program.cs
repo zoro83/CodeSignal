@@ -12,7 +12,6 @@ namespace Test9
         {
             int maxLength = inputArray[0].Length;
             int maxlengthCount = 0;
-            int maxLengthIndex;
             string[] inputArrayOnlyMaxLength = new string[inputArray.Length];
             for (int i = 0; i < inputArray.Length; i++)
             {
