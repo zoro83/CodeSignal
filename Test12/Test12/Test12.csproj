@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{D9386658-C1EF-435E-8751-17EC6E45DB81}</ProjectGuid>
+    <ProjectGuid>{26D705B1-ADBB-46EE-86AE-FE1647FD26DC}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>DigitRootSort</RootNamespace>
-    <AssemblyName>DigitRootSort</AssemblyName>
+    <RootNamespace>Test12</RootNamespace>
+    <AssemblyName>Test12</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
