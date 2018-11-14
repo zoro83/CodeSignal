@@ -34,6 +34,9 @@ namespace Test35
 
         static void Main(string[] args)
         {
+            string inputString = "a a_933";
+            Console.WriteLine(firstDigit(inputString));
+            Console.ReadKey();
         }
     }
 }
