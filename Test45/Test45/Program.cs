@@ -8,34 +8,48 @@ namespace Test45
 {
     class Program
     {
+        public static bool ChackPalindrome(string str, out int count)
+        {
+            count = 0;
+            bool flag = true;
+            if (str.Length > 1)
+            {
+                for (int i = 0; i < str.Length / 2; )
+                {
+                    if (str[i] == str[str.Length-1-i])
+                    {
+                        i++;
+                        count++;
+                    }
+                    else
+                    {
+                        flag = false;
+                        return flag;
+                    }
+                }
+            }
+            return flag;
+        }
 
         public static string buildPalindrome(string st)
         {
-            string polidrome = st;
-            int count = 0;
-
-            for (int i = 0; i < polidrome.Length / 2;)
+            string palidrome = st;
+            while (!ChackPalindrome(palidrome, out int count))
             {
-                if (polidrome[i] == polidrome[polidrome.Length - 1 - i])
+
+                for (int i = count; i >= 0; i--)
                 {
-                    i++;
-                    count++;
-                }
-                else
-                {
-                    for (int j = 0; j <= i; j++)
-                    {
-                        polidrome = polidrome.Insert(st.Length + j, $"{st[i - j]}");
-                    }
-                    //Console.WriteLine(polidrome);
-                    count = 1;
+                    palidrome = st + palidrome.Insert(st.Length+count-i, $"{st[i]}"); 
                 }
             }
-            return polidrome;
+
+            return palidrome;
         }
         static void Main(string[] args)
         {
-            string st = "abcdckba";
+            string st = "abcdc";
+            //Console.WriteLine(st.Substring(0,2));
+            //Console.WriteLine(ChackPalindrome(st));
             //st = st.Insert(4, "n");
             //Console.WriteLine(st);
             Console.WriteLine(buildPalindrome(st));
