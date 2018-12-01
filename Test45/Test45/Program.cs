@@ -36,11 +36,12 @@ namespace Test45
             string palidrome = st;
             while (!ChackPalindrome(palidrome, out int count))
             {
-
+                string temp = st;
                 for (int i = count; i >= 0; i--)
                 {
-                    palidrome = st + palidrome.Insert(st.Length+count-i, $"{st[i]}"); 
+                    temp += st[i];//palidrome.Insert(st.Length+count-i, $"{st[i]}"); 
                 }
+                palidrome = temp;
             }
 
             return palidrome;
