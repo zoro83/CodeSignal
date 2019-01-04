@@ -29,29 +29,17 @@ namespace Test47
                 return false;
             }
             string str = inputString + "-";
-            bool flag = true;
             for (int i = 0; i < 17;)
             {
-                if (str[i] >= 'A' && str[i] <= 'F' || str[i] >= '0' && str[i] <= '9')
-                {
-                    if (str[i + 1] >= 'A' && str[i + 1] <= 'F' || str[i + 1] >= '0' && str[i + 1] <= '9'
+                if (str[i] >= 'A' && str[i] <= 'F' || str[i] >= '0' && str[i] <= '9'
+                    && str[i + 1] >= 'A' && str[i + 1] <= 'F' || str[i + 1] >= '0' && str[i + 1] <= '9'
                     && str[i + 2] == '-')
-                    {
-                        i += 3;
-                    }
-                    else
-                    {
-                        flag = false;
-                        return flag;
-                    }
-                }
+                    i += 3;
                 else
-                {
-                    flag = false;
-                    return flag;
-                }
+                    return false;
+                
             }
-            return flag;
+            return true;
         }
 
         static void Main(string[] args)
