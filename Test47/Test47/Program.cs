@@ -37,7 +37,6 @@ namespace Test47
                     i += 3;
                 else
                     return false;
-                
             }
             return true;
         }
