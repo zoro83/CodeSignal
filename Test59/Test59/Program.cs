@@ -30,11 +30,9 @@ namespace Test59
             {
                 if (temp)
                 {
-
                     for (int j = step1; j < n - step1; j++)
                     {
                         sp[step1][j] += ++num;
-                        //num++;
                     }
                     for (int i = step1 + 1; i < n - step1; i++)
                     {
@@ -48,7 +46,6 @@ namespace Test59
                     for (int j = n - step2 - 1; j >= step2 - 1; j--)
                     {
                         sp[n - step2][j] += ++num;
-                        //num++;
                     }
                     for (int i = n - step2 - 1; i >= step2; i--)
                     {
@@ -56,9 +53,7 @@ namespace Test59
                     }
                     temp = true;
                     step1++;
-
                 }
-
             }
             return sp;
         }
